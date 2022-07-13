@@ -59,11 +59,15 @@ const listaApp = new Vue({
     // Predisporre un campo di input testuale e un pulsante "aggiungi": cliccando sul pulsante, il 
     // testo digitato viene letto e utilizzato per creare un nuovo todo, 
     // che quindi viene aggiunto alla lista dei todo esistenti.
-    addTask() {
-      this.tasks.push(this.nuovaTask)
+    addTask(textelement) {
+      const nuovaLista = {
+        text: textelement
+      }
+      this.tasks.push(nuovaLista)
       // Reset Html
-      this.newTask = ""
+
     }
   },
+
 
 })
