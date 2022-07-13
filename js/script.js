@@ -7,9 +7,6 @@ console.log("JS")
 console.log('Vue ok', Vue)
 
 
-// MILESTONE 2
-// Visualizzare a fianco ad ogni item ha una "x": cliccando su di essa, 
-// il todo viene rimosso dalla lista.
 // MILESTONE 3
 // Predisporre un campo di input testuale e un pulsante "aggiungi": cliccando sul pulsante, il 
 // testo digitato viene letto e utilizzato per creare un nuovo todo, 
@@ -46,6 +43,15 @@ const listaApp = new Vue({
             done: true
         }
     ]
+  }, 
+   
+
+// MILESTONE 2
+// Visualizzare a fianco ad ogni item ha una "x": cliccando su di essa, 
+// il todo viene rimosso dalla lista.
+  methods: { removeTask (index){
+      this.tasks.splice(index, 1)
   }
+  },
    
 })
