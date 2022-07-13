@@ -50,25 +50,17 @@
 <!-- Contenuto Principale -->
 <main class="w-50 mx-auto">
     <ul class="list-group my-2">
-        <li class="list-group-item justify-content-between d-flex">
-            <h6>prova
-            </h6>
-            <button type="button" class="btn-close"></button>
-        </li>
-        <li class="list-group-item justify-content-between d-flex">
-            <h6>prova
-            </h6>
-            <button type="button" class="btn-close"></button>
-        </li>
-        <li class="list-group-item justify-content-between d-flex">
-            <h6>prova
-            </h6>
-            <button type="button" class="btn-close"></button>
-        </li>
-        <li class="list-group-item justify-content-between d-flex">
-            <h6>prova
-            </h6>
-            <button type="button" class="btn-close"></button>
+        <!-- // MILESTONE 1
+// Stampare all'interno di una lista, un item per ogni todo.
+// Se la proprietà done è uguale a true, visualizzare il testo del todo sbarrato. -->
+        <li 
+          class="list-group-item justify-content-between d-flex"  
+        :class="{'text-decoration-line-through': task.done !== true}"
+        v-for="task in tasks">
+         {{task.text}}
+        
+         <button type="button" class="btn-close"></button>
+    
         </li>
     </ul>
 </main>
