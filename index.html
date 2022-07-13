@@ -53,8 +53,12 @@
         <!-- // MILESTONE 1
 // Stampare all'interno di una lista, un item per ogni todo.
 // Se la proprietà done è uguale a true, visualizzare il testo del todo sbarrato. -->
+        <!-- BONUS2 -->
+        <!-- 2- cliccando sul testo dell'item, invertire il valore della proprietà done del todo corrispondente
+(se done era uguale a false, impostare true e viceversa -->
         <li class="list-group-item justify-content-between d-flex"
-          :class="{'text-decoration-line-through': task.done == true}" v-for="(task, index) in tasks">
+          :class="{'text-decoration-line-through': task.done == true}" v-for="(task, index) in tasks"
+          @click="task.done = !task.done">
           {{task.text}}
 
 

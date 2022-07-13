@@ -37,6 +37,7 @@ const listaApp = new Vue({
         done: true
       }
     ],
+    newtask: ""
 
   },
 
@@ -53,10 +54,12 @@ const listaApp = new Vue({
     // che quindi viene aggiunto alla lista dei todo esistenti.
     addTask(textelement) {
       const nuovaLista = {
-        text: textelement
+        text: textelement,
+        done: false
       }
-      this.tasks.push(nuovaLista)
 
+      // Reset Html
+      textelement != "" ? this.tasks.push(nuovaLista) : this.newtask = ""
     }
   },
 
