@@ -37,7 +37,6 @@ const listaApp = new Vue({
         done: true
       }
     ],
-    newtask: ""
 
   },
 
@@ -58,8 +57,10 @@ const listaApp = new Vue({
         done: false
       }
 
-      // Reset Html
-      textelement != "" ? this.tasks.push(nuovaLista) : this.newtask = ""
+      this.tasks.push(nuovaLista)
+
+      // Reset HTML
+      this.nuovaTask = ""
     }
   },
 
